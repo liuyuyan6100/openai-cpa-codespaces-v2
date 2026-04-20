@@ -1,0 +1,12 @@
+# openai-cpa 配置
+reg_mode: "protocol"
+email_api_mode: "tempmail"
+mail_domains: "2925.com"
+
+# 多线程配置
+enable_multi_thread_reg: true
+reg_threads: 3
+threads: 5
+
+# 日志
+log_level: "info"
