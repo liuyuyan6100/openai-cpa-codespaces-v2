@@ -1,6 +1,11 @@
 {
   "name": "OpenAI CPA",
   "image": "python:3.11-slim",
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  },
   "postCreateCommand": "pip install --no-cache-dir -r requirements.txt",
   "forwardPorts": [
     8000
