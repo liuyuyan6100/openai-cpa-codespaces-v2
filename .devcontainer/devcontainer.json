@@ -1,13 +1,10 @@
 {
   "name": "OpenAI CPA",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": ".."
-  },
+  "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
-  "postCreateCommand": "pip install --no-cache-dir -r requirements.txt",
+  "postCreateCommand": "bash .devcontainer/setup.sh",
   "forwardPorts": [
     8000
   ],
