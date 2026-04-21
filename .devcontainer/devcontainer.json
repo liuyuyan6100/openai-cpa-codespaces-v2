@@ -1,20 +1,8 @@
 {
   "name": "OpenAI CPA",
-  "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
-  "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-    "ghcr.io/devcontainers/features/python:1": {
-      "version": "3.11"
-    }
-  },
-  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "image": "python:3.11-slim",
+  "postCreateCommand": "pip install --no-cache-dir -r requirements.txt",
   "forwardPorts": [
     8000
-  ],
-  "portsAttributes": {
-    "8000": {
-      "label": "OpenAI CPA Web",
-      "onAutoForward": "openBrowser"
-    }
-  }
+  ]
 }
